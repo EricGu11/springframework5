@@ -222,6 +222,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 						//调用表达式，说白了就是调用工厂的方法，然后改变对象
 						//我们假设对象不需要改变的情况那么返回了原对象就是a
 						//需要改变的情况我们下文再分享
+						//AOP将target object转变为proxy object
 						singletonObject = singletonFactory.getObject();
 						//然后把这个对象放到第三个map当中
 						this.earlySingletonObjects.put(beanName, singletonObject);

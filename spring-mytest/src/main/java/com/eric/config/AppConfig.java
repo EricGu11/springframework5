@@ -2,10 +2,7 @@ package com.eric.config;
 
 import com.eric.bean.Student;
 import com.eric.bean.User;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
+import org.springframework.context.annotation.*;
 
 /**
  * @author: Eric
@@ -14,6 +11,7 @@ import org.springframework.context.annotation.FilterType;
  */
 @ComponentScan(basePackages = "com.eric")
 @Configuration
+@EnableAspectJAutoProxy
 public class AppConfig {
 
 	/*@Bean
